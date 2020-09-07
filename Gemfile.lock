@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/capistrano/rbenv.git
+  revision: 1fdb93a6dd4a4ab3fb786c995055cf6949daf7a4
+  specs:
+    capistrano-rbenv (2.2.0)
+      capistrano (~> 3.1)
+      sshkit (~> 1.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -70,6 +78,19 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
+    capistrano-bundler (2.0.1)
+      capistrano (~> 3.1)
+    capistrano-passenger (0.2.0)
+      capistrano (~> 3.0)
+    capistrano-postgresql (6.2.0)
+      capistrano (>= 3.0)
+      sshkit (>= 1.17.0)
+    capistrano-rails (1.6.1)
+      capistrano (~> 3.1)
+      capistrano-bundler (>= 1.1, < 3)
+    capistrano-rbenv-install (1.2.0)
+      capistrano (>= 3.0)
+      capistrano-rbenv (>= 2.0)
     capybara (3.33.0)
       addressable
       mini_mime (>= 0.1.3)
@@ -216,6 +237,12 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capistrano
+  capistrano-bundler
+  capistrano-passenger
+  capistrano-postgresql
+  capistrano-rails
+  capistrano-rbenv!
+  capistrano-rbenv-install
   capybara (>= 2.15)
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
