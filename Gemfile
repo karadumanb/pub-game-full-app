@@ -5,8 +5,6 @@ ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -31,16 +29,11 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'sqlite3', '~> 1.4'
+  gem 'mina', '1.2.3'
 end
 
 group :development do
-  gem 'capistrano', require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano-passenger', require: false
-  gem 'capistrano-postgresql', require: false
-  gem 'capistrano-rails', require: false
-  gem 'capistrano-rbenv', git: 'https://github.com/capistrano/rbenv.git', require: false
-  gem 'capistrano-rbenv-install', require: false
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
@@ -55,6 +48,11 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+end
+
+group :production do
+  gem 'pg'
+  gem 'unicorn'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
